@@ -9,29 +9,35 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
+            height: 300px;
+            align-items: flex-start;
         }
 
         div.item {
             background-color: lightskyblue;
             border: 1px solid black;
-            text-align: center;
-            flex-basis: 200px;
-            
+            text-align: center;  
         }
 
         div#cxA {
-            flex-shrink: 4;
-            flex-grow: 4;
+         /*   flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+            flex: 0 1 150px;
         }
 
         div#cxB {
+         /*   flex-grow: 1;
             flex-shrink: 1;
-            flex-grow: 1;
+            flex-basis: 150px; */
+            flex: 1 1 150px;
         }   
         
         div#cxC {
-            flex-shrink: 1;
-            flex-grow: 1;
+         /*   flex-grow: 1;
+            flex-shrink: 8;
+            flex-basis: auto;  */
+            flex: 1 8 auto;
         }
     </style>
 </head>
