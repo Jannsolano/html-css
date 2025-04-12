@@ -28,11 +28,11 @@ header > h1 {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.691);
     padding: 10px;
     flex: 0 0 200px;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 }
 
 header > nav {
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 
     display: flex;
     flex-flow: row wrap;
@@ -61,4 +61,18 @@ article {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.567);
+}
+
+@media screen and (max-width:580px) {
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+    header > h1 {
+        flex: 0 1 50px;
+
+    }
+
+    header > nav > a {
+        width: 90vw;
+    }
 }
