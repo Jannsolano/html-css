@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+div.container {
+    display: grid;
+    /*no lugar do grid-template rows e columns usaremos essa propriedade, PRIMEIRO ROWS, DEPOIS COLUMNS TEM Q SER NESSA ORDEM, e separados por uma barra "/" */
+    
+    grid-template: 100px 100px 100px / auto auto auto;
+
+    /* adiciona o padrão de novas linhas SE elas forem adicionadas ao conteúdo, assim o padrão se mantém
+    grid-auto-rows: 100px;
+    Caso ultrapasse criando uma nova COLUNA para o grid, adicionamos o grid-auto-columns: 100px;
+    com algum valor, ele não pode ser AUTO -*/
+
+    /* na ordem: align  justify   */
+    place-items: stretch center;
+    /* na ordem:   align justify  */
+    place-content: start end;
+}
