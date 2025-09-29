@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags novas que não utilizei</title>
+</head>
+<body>
+    <h1>&lt;Progress&gt;</h1>
+    <p>cria uma barra de progresso, definida com parametro <mark>value</mark> para porcentagem e <mark>max</mark> para o total</p>
+    <progress value="60" max="100"></progress>
+    <br>
+
+    <h2>meter</h2>
+
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+
+    <label for="disk_d">Disk usage D:</label>
+    <meter id="disk_d" value="0.6">60%</meter>
+
+
+    <h2>Variável com tag &lt;var&gt;</h2>
+    <p>exemplo</p>
+    <p><var>x</var>+<var>y</var>=2</p>
+
+    <hgroup style="border: 1px solid salmon; margin-bottom: 60px;">
+        <h2>&lt;Dialog&gt;</h2>
+        <p>abre uma caixa de diálogo na tela</p>
+        <dialog open>This is an open dialog window</dialog>
+    </hgroup>
+
+    <div>
+        <h2>&lt;Fieldset&gt;</h2>
+        <p>agrupa elementos em um formulário</p>
+        <p>e o &lt;Legend&gt; dentro nomeia o formulário</p>
+
+    <form action="/action_page.php">
+
+        <fieldset style="color: blueviolet; border-color: brown;">
+            <legend style="color: blue; background-color: lightyellow;">Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    </div>
+    
+    <h2>hgroup</h2>
+    <p>é uma forma de dizer que os parágrafos fazem parte da mesma caixa do título</p>
+    <hgroup style=" border: solid red;border-radius: 8px;padding: 10px;width: 300px;" >
+        <h3>Norway</h3>
+        <p>The land with the midnight sun.</p>
+    </hgroup>
+
+    <h2>optgroup and option</h2>
+    <p>Optgroup agrupa as opções dentro de um select</p>
+    <p>option é uma das opções selecionáveis</p>
+
+    <label for="cars">Choose a car:</label>
+        <select  name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </optgroup>
+    </select>
+
+    <h2>output</h2>
+    <p>mostra o resultado de um cálculo</p>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">+<input type="number" id="b" value="25">=<output name="x" for="a b"></output>
+    </form>
+
+    <hgroup>
+        <h2>Ruby</h2>
+        <p>é utilizada para descrever o som das letras escritas</p>
+        <ruby>
+            漢 <rt> ㄏㄢˋ </rt>
+            açúcar <rt> ássúcar </rt>
+        </ruby>
+    </hgroup>
+    <hgroup>
+        <h2>SVG</h2>
+        <p>define um container para aplicações gráficas SVG</p>
+        <svg width="200" height="200">
+            <circle cx="100" cy="100" r="70" stroke="green" stroke-width="5" fill="yellow"/>
+        </svg>
+    </hgroup>
+
+    <button onclick="showContent()">Show hidden content</button>
+
+    <h2>Template</h2>
+    <p>
+        é utilizada como um container para conteúdo HTML escondido do usuário quando a página carrega.
+    </p>
+
+    <template>
+        <h2>Flower</h2>
+        <img src="img_white_flower.jpg" width="214" height="204">
+    </template>
+
+    <script>
+    function showContent() {
+        let temp = document.getElementsByTagName("template")[0];
+        let clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+    }
+    </script>
+
+
+    <h2>wordbreak</h2>
+    <p>
+        faz com que certas palavras longas só sejam quebradas onde a tag estiver
+    </p>
+
+    <p>To learn AJAX, you must be familiar with the XML<wbr>Http<wbr>Request Object.</p>
+</body>
+</html>
